@@ -11,7 +11,6 @@
 
 "Python implementation of record stream processing utilities."
 
-* Free software: ISC license
 * Documentation: https://precs.readthedocs.org.
 
 Features
