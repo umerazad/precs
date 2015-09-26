@@ -23,10 +23,12 @@ if [ ! -d $VIRTUALENV ]; then
     $VIRTUALENV/bin/pip install --upgrade pip-tools
 fi
 
-$VIRTUALENV/bin/pip-compile requirements.in
+$VIRTUALENV/bin/pip-compile requirements-dev.in
 $VIRTUALENV/bin/pip-compile requirements-test.in
-$VIRTUALENV/bin/pip install $PIP_ARGS -r requirements.txt --exists-action=w
+$VIRTUALENV/bin/pip-compile requirements.in
+$VIRTUALENV/bin/pip install $PIP_ARGS -r requirements-dev.txt --exists-action=w
 $VIRTUALENV/bin/pip install $PIP_ARGS -r requirements-test.txt --exists-action=w
+$VIRTUALENV/bin/pip install $PIP_ARGS -r requirements.txt --exists-action=w
 $VIRTUALENV/bin/pip install --editable .
 export PYTHONPATH=`pwd`:$PYTHONPATH
 source $VIRTUALENV/bin/activate

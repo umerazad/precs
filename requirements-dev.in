@@ -1,0 +1,15 @@
+# pep8 checking etc.
+flake8>=2.4.1
+
+# Debug tools
+ipdb>=0.8
+pudb>=2014.1
+
+# Check requirements versions
+pip-tools>=0.3.5
+
+# show pip dependencies
+pipdeptree>=0.3
+
+# Software releasing made easy and repeatable
+zest.releaser>=5.2
