@@ -19,7 +19,7 @@ requirements = [
 ]
 
 test_requirements = [
-    # TODO: put package test requirements here
+    'Click'
 ]
 
 setup(
@@ -33,6 +33,11 @@ setup(
     packages=[
         'precs',
     ],
+    py_modules=['precs/precs'],
+    entry_points='''
+        [console_scripts]
+        precs=precs.precs:cli
+    ''',
     package_dir={'precs':
                  'precs'},
     include_package_data=True,
