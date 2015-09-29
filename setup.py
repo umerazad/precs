@@ -23,7 +23,7 @@ with open('requirements-test.txt') as test_req:
 
 setup(
     name='precs',
-    version='0.1.0a1',
+    version='0.1.0a2.dev0',
     description="Python implementation of record stream processing utilities.",
     long_description=readme + '\n\n' + history,
     author="Muhammad Umer Azad",
