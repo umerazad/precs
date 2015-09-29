@@ -3,7 +3,7 @@
 History
 -------
 
-0.1.0a2 (unreleased)
+0.1.0a2 (2015-09-28)
 --------------------
 
 - Fixing requirements packaging.
