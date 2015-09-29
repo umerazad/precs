@@ -3,7 +3,7 @@
 History
 -------
 
-0.1.0a1 (unreleased)
+0.1.0a1 (2015-09-28)
 --------------------
 
 - Fixed setup.py to correctly package requiments.
