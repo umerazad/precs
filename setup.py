@@ -24,7 +24,7 @@ test_requirements = [
 
 setup(
     name='precs',
-    version='0.1.0',
+    version='0.1.01',
     description="Python implementation of record stream processing utilities.",
     long_description=readme + '\n\n' + history,
     author="Muhammad Umer Azad",
