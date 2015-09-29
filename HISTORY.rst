@@ -6,7 +6,7 @@ History
 0.1.0a2 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Fixing requirements packaging.
 
 
 0.1.0a1 (2015-09-28)

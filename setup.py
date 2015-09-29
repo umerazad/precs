@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import os
-
 try:
     from setuptools import setup
 except ImportError:
@@ -15,11 +13,20 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read().replace('.. :changelog:', '')
 
-with open('requirements.txt') as req:
-    requirements = req.read().splitlines()
 
-with open('requirements-test.txt') as test_req:
-    test_requirements = test_req.read().splitlines()
+def requirements(*filenames):
+    requires = []
+
+    for filename in filenames:
+        with open(filename, 'r') as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith('#'):
+                    # Skip blank lines and comments
+                    continue
+                requires.append(line)
+
+    return requires
 
 setup(
     name='precs',
@@ -41,7 +48,7 @@ setup(
     package_dir={'precs':
                  'precs'},
     include_package_data=True,
-    install_requires=requirements,
+    install_requires=requirements('requirements.txt'),
     license="MIT",
     zip_safe=False,
     keywords='precs',
@@ -49,11 +56,8 @@ setup(
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
         'Natural Language :: English',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 2.7'
     ],
     test_suite='tests',
-    tests_require=test_requirements
+    tests_require=requirements('requirements-test.txt')
 )
