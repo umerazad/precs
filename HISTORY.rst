@@ -3,7 +3,7 @@
 History
 -------
 
-0.1.0a3 (unreleased)
+0.1.0a3 (2015-09-28)
 --------------------
 
 - Final fix to get the pip installation working against py2.7
