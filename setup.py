@@ -30,7 +30,7 @@ def requirements(*filenames):
 
 setup(
     name='precs',
-    version='0.1.0a3',
+    version='0.1.0a4.dev0',
     description="Python implementation of record stream processing utilities.",
     long_description=readme + '\n\n' + history,
     author="Muhammad Umer Azad",
