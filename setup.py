@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import os
 
 try:
     from setuptools import setup
@@ -14,13 +15,11 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read().replace('.. :changelog:', '')
 
-requirements = [
-    # TODO: put package requirements here
-]
+with open('requirements.txt') as req:
+    requirements = req.read().splitlines()
 
-test_requirements = [
-    'Click'
-]
+with open('requirements-test.txt') as test_req:
+    test_requirements = test_req.read().splitlines()
 
 setup(
     name='precs',
@@ -32,6 +31,7 @@ setup(
     url='https://github.com/umerazad/precs',
     packages=[
         'precs',
+        'precs.processors'
     ],
     py_modules=['precs/precs'],
     entry_points='''
